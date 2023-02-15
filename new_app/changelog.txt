@@ -1,0 +1,8 @@
+Here is a file repertoring all the changes about the application.
+
+In templates/base.html (line 8) :
+"XXX.css" into "main.css", to link the html to the css
+
+In app.py :
+Line 32 : "XXX.html" into time.html, to link to the good page
+Line 32 : "date=None" into "date=date" and "hour=None" into "hour=hour"
