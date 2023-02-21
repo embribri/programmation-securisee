@@ -5,12 +5,12 @@
 ### FIXED 
 
 - Fix the error that appears when loading the time/ page
-    In app.py :
-    Line 32 : "XXX.html" into time.html, to link to the good page
+    In app.py (line 32):
+    "XXX.html" into time.html, to link to the good page
 
 - Fix the date and time display on the time/ page
-    In app.py :
-    Line 32 : "date=None" into "date=date" and "hour=None" into "hour=hour"
+    In app.py (line 32):
+    "date=None" into "date=date" and "hour=None" into "hour=hour"
 
 - Link the CSS to the HTML of the application
     In templates/base.html (line 8) :
