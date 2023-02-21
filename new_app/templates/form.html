@@ -1,8 +1,22 @@
 {% extends 'base.html' %}
 
+<!-- Title of the page -->
 {% block title %}Form{% endblock %}
 
 {% block main %}
     <h1>Form</h1>
     <p> Could you give us an advice about this website?</p>
+    <!-- Asking for first name, last name & advice for the website -->
+    <form action="{{ url_for('advice') }}" method="POST">
+		<label for="lastname">Last name:</label>
+		<input type="text" id="lastname" name="lastname" required><br><br>
+		
+		<label for="firstname">First name:</label>
+		<input type="text" id="firstname" name="firstname" required><br><br>
+		
+		<label for="advice">Advice:</label>
+		<textarea id="advice" name="advice" required></textarea><br><br>
+		
+		<input type="submit" value="Submit">
+	</form>
 {% endblock %}
