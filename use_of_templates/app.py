@@ -29,7 +29,7 @@ def time():
     # we can pass some data to the template to create dynamic content
     # to create variables inside the template, use keywords arguments with
     # name=value
-    return flask.render_template('XXXX.html', date=None, hour=None)
+    return flask.render_template('time.html', date=date, hour=hour)
 
 
 if __name__ == '__main__':  # consider this line as the main
