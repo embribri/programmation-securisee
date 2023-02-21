@@ -6,9 +6,10 @@ expending those templates, and pass variable to create dynamic content.
 
 import datetime  # import a library to manage dates
 
-from wtforms import Form, BooleanField, StringField, validators 
+from flask import request
 
-from flask import Flask, request # import the flask library
+import flask # import the flask library
+
 
 app = flask.Flask(__name__)  # instantiate a minimal webserver
 
@@ -32,16 +33,21 @@ def time():
     # to create variables inside the template, use keywords arguments with
     # name=value
     return flask.render_template('time.html', date=date, hour=hour)
-
-
-@app.route('/form/', methods=['GET', 'POST'])  # create a new route
+    
+# creating a new route for the form
+@app.route('/form/', methods=['POST', 'GET'])
 def form():
-    log = RegistrationForm(request.form)
-    if request.method == 'POST' and log.validate():
-        user = User(log.username.data, log.email.data, log.password.data)
-        db_session.add(user)
-        flash("")
-    return flask.render_template('form.html', log=log)
+    return flask.render_template('form.html')
+
+
+# creating a new route for showing advices and name of the writter
+@app.route('/advice/', methods=['POST'])
+def advice():
+    lastname = request.form['lastname']
+    firstname = request.form['firstname']
+    advice = request.form['advice']
+    return flask.render_template('advice.html', lastname=lastname, firstname=firstname, advice=advice)
+
 
 if __name__ == '__main__':  # consider this line as the main
     app.run('0.0.0.0', 8080, debug=True)  # start web server in debug mode on port 8080
