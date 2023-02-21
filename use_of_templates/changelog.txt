@@ -1,8 +1,17 @@
-Here is a file repertoring all the changes about the application.
+# CHANGELOG
 
-In templates/base.html (line 8) :
-"XXX.css" into "main.css", to link the html to the css
+2023-16-02  BRIEU Emma  <ebrieu.ing2024@esaip.org>
 
-In app.py :
-Line 32 : "XXX.html" into time.html, to link to the good page
-Line 32 : "date=None" into "date=date" and "hour=None" into "hour=hour"
+### FIXED 
+
+- Fix the error that appears when loading the time/ page
+    In app.py :
+    Line 32 : "XXX.html" into time.html, to link to the good page
+
+- Fix the date and time display on the time/ page
+    In app.py :
+    Line 32 : "date=None" into "date=date" and "hour=None" into "hour=hour"
+
+- Link the CSS to the HTML of the application
+    In templates/base.html (line 8) :
+    "XXX.css" into "main.css", to link the html to the css
