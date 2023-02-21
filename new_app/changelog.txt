@@ -1,8 +1,8 @@
-Here is a file repertoring all the changes about the application.
+# CHANGELOG
 
-In templates/base.html (line 8) :
-"XXX.css" into "main.css", to link the html to the css
+2023-22-02  BRIEU Emma  <ebrieu.ing2024@esaip.org>
 
-In app.py :
-Line 32 : "XXX.html" into time.html, to link to the good page
-Line 32 : "date=None" into "date=date" and "hour=None" into "hour=hour"
+### ADDED
+
+- New page creating the form : form.html
+- New page showing the advice : advice.html
